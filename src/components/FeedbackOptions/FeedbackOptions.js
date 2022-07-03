@@ -22,7 +22,12 @@ function FeedbackOptions({ options, onClickBtn }) {
 
 FeedbackOptions.propTypes = {
   onClickBtn: PropTypes.func.isRequired,
-  options: PropTypes.objectOf(PropTypes.string),
+
+  option: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.string.isRequired,
+    bad: PropTypes.string.isRequired,
+  }),
 };
 
 export default FeedbackOptions;

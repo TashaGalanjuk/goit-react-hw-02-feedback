@@ -11,23 +11,21 @@ function Statistics({
 }) {
   return (
     <>
-      {totalFeedback > 0 && (
-        <div className={s.statistics}>
-          <h1 className={s.title}>Statistics</h1>
-          <div className={s.statistics_data}>
-            <p className={s.text}>Good: {good}</p>
-            <p className={s.text}>Neutral: {neutral}</p>
-            <p className={s.text}>Bad: {bad}</p>
-          </div>
-          <div className={s.analitics}>
-            <p className={s.analitics_text}>Total: {totalFeedback}</p>
-            <p className={s.analitics_text}>
-              Positive feedback:
-              {good === 0 ? 0 : positiveFeedbackPercentage}%
-            </p>
-          </div>
+      <div className={s.statistics}>
+        <h1 className={s.title}>Statistics</h1>
+        <div className={s.statistics_data}>
+          <p className={s.text}>Good: {good}</p>
+          <p className={s.text}>Neutral: {neutral}</p>
+          <p className={s.text}>Bad: {bad}</p>
         </div>
-      )}
+        <div className={s.analitics}>
+          <p className={s.analitics_text}>Total: {totalFeedback}</p>
+          <p className={s.analitics_text}>
+            Positive feedback:
+            {good === 0 ? 0 : positiveFeedbackPercentage}%
+          </p>
+        </div>
+      </div>
     </>
   );
 }
